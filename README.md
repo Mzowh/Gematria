@@ -5,7 +5,7 @@
 My Open-Source Gematria program
 
 # How to use:
-1. Create a file named GematriaInput.txt (The program will read from this, if you do not have it, you will get a message saying that you need to create it.)
+1. Create a file named GematriaMain.txt (The program will read from this, if you do not have it, you will get a message saying that you need to create it.)
 2. Enter your phrases and 'directives'
 3. Run the program
 4. Open GeneratedSite.HTML
