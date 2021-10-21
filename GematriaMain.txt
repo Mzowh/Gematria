@@ -1,12 +1,26 @@
-@DocName English Greetings
-
+@DocName A miracle
 Hello
-Good-Day!https://github.com/Mzowh/Gematria/blob/main/GematriaInput.txt
+Good Bye
 
-@DocName French Greetings
-
-@Comment Good Day!
+@Comment French for Hello/Good Day!
 Bon-Jour
 
-@Comment Nice to meet you!
-Enchante
+@Comment French for Good bye!
+Au Revoir
+
+@Comment 4chan's paranormal board
+Four Chan /x/
+Supernatural
+
+@Comment Creator of Thelema 
+Crowley
+
+@Comment The movement created by Aleister Crowley in Aiwass's book: The Book of the Law. 93 is a sacred number in it.
+Thelema
+
+@Comment Aiwass
+The Minister of Hoor-Paar-Kraat
+
+@Comment The Author of Liber-Al Legis
+Aiwass
+A Spirit
