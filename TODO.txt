@@ -1,0 +1,132 @@
+TODO List
+
+MZOWH:
+I think that @Comment should add rather than set, enabling 'communication' between the cyphers based on the findings
+This is EXTREMELY important to the modular nature of this program.
+
+"@Include (Input file)" Will currently OVER-WRITE the comment, making it annoying to work with across inputs
+
+For example
+@DocName Diseases
+
+@Comment Will probably kill you
+Cancer
+
+@DocName Zodiac
+@Comment The Cancer Zodiac Sign
+Cancer
+
+Shall generate:
+
+Value (Does not matter)
+Size: 1
+Phrase		Special
+---
+Cancer		[Diseases]	Will probably kill you
+			[Zodiac]	The Cancer Zodiac Sign
+
+---
+
+Create a doc directive for switching cyphers:
+---
+Eg:
+
+@EnableCypher Mzowh
+Hello World
+@DisableCypher Mzowh
+
+@EnableCypher Jewish
+@EnableCypher English
+@EnableCypher Simple
+
+@Comment This should create at table similar to gematrix.org
+Hello World!
+
+
+@DisableCypher Simple
+@DisableCypher English
+@DisableCypher Jewish
+
+
+Output should be:
+
+Value:  31
+Size: 1
+Phrase:		Special
+Mzowh
+
+Phrase				Simple		English		Jewish		Special
+---
+Hello World			124			744			1157		This should at table similar to gematrix.org
+(Something)			124			???			???			Because (Something) has the same Simple Value has Hello World, it is included in this table
+(Something Else)	??			744			1157		Same again			
+---
+
+
+Cypher: Simple
+Value: 124
+---
+Phrase			Special:
+(Simple)		(Simple) has the same value in the Simple Cypher as "Hello World"
+Hello World		This should create at table similar to gematrix.org
+----
+
+Cypher: English
+Value: 744
+---
+Phrase			Special:
+I love you		- Empty -
+Great Britain	Land of Licenses
+Hello World		This should create at table similar to gematrix.org
+----
+
+Cypher: Jewish
+Value: 1157
+---
+Phrase				Special
+Flower of Life		Sacred Geometry
+Hello World			This should create at table similar to gematrix.org
+Work of God			Gematria is the work of God
+---
+
+
+MZOWH:
+Flow Chart
+Add a Directive to show links
+
+
+@BeginLink
+@LinkName This shows a link between things:
+@LinkDetails (A detailed explanation as to why)
+@LinkType Circular
+@LinkCypher Mzowh
+
+@LinkPhrase A
+(why)
+
+@LinkPhrase B
+(why)
+
+@LinkPhrase C
+(why)
+
+@LinkPhrase D
+(why)
+
+@EndLink
+
+Will produce:
+
+This shows a link between things:
+---
+          [A value]
+              A
+        (why)/ \(why)
+[D value]  D	B   [B value]
+        (why)\ / (why)
+              C
+          [C Value]
+
+
+(A detailed explanation which explains why)
+---

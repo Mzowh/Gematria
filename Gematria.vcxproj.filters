@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Cyphers">
+      <UniqueIdentifier>{2b21a40d-8e98-4391-972a-fe34f77e7cd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Cyphers">
+      <UniqueIdentifier>{1b01b0b4-79eb-422d-bf53-c0714848e81a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inputs">
+      <UniqueIdentifier>{524dfad8-5c1f-4eb2-b0d3-4ddec4c044d6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\GematriaHTMLBuilder.H++">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Gematria.H++">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Cyphers\Mzowh.H++">
+      <Filter>Header Files\Cyphers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Cyphers\Simple.H++">
+      <Filter>Header Files\Cyphers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Cyphers\English.H++">
+      <Filter>Header Files\Cyphers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Cyphers\Jewish.H++">
+      <Filter>Header Files\Cyphers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Cyphers\All.H++">
+      <Filter>Header Files\Cyphers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Main.C++">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Gematria.C++">
+      <Filter>Source Files\Cyphers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Cyphers\Simple.C++">
+      <Filter>Source Files\Cyphers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Cyphers\English.C++">
+      <Filter>Source Files\Cyphers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Cyphers\Jewish.C++">
+      <Filter>Source Files\Cyphers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Cyphers\Mzowh.C++">
+      <Filter>Source Files\Cyphers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GematriaHTMLBuilder.C++">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="TODO.txt" />
+  </ItemGroup>
+</Project>
