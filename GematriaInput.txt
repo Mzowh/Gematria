@@ -1,0 +1,12 @@
+@DocName English Greetings
+
+Hello
+Good-Day!
+
+@DocName French Greetings
+
+@Comment Good Day!
+Bon-Jour
+
+@Comment Nice to meet you!
+Enchante
