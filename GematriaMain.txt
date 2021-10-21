@@ -1,7 +1,7 @@
 @DocName English Greetings
 
 Hello
-Good-Day!
+Good-Day!https://github.com/Mzowh/Gematria/blob/main/GematriaInput.txt
 
 @DocName French Greetings
 
