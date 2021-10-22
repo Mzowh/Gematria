@@ -28,15 +28,30 @@
     <ClInclude Include="Source\GematriaHTMLBuilder.H++" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source\Cyphers\English.C++" />
-    <ClCompile Include="Source\Cyphers\Jewish.C++" />
-    <ClCompile Include="Source\Cyphers\Mzowh.C++" />
-    <ClCompile Include="Source\Cyphers\Simple.C++" />
     <ClCompile Include="Source\Gematria.C++" />
     <ClCompile Include="Source\GematriaHTMLBuilder.C++" />
     <ClCompile Include="Source\Main.C++" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="GematriaMain.txt" />
+    <Text Include="Inputs\AlchemyElements.txt" />
+    <Text Include="Inputs\Continents.txt" />
+    <Text Include="Inputs\Decoding USA.txt" />
+    <Text Include="Inputs\GematriaMain.txt" />
+    <Text Include="Inputs\HelloTestOld.txt" />
+    <Text Include="Inputs\HelloTestOldOld.txt" />
+    <Text Include="Inputs\Jamie.txt" />
+    <Text Include="Inputs\Kabbalah.txt" />
+    <Text Include="Inputs\LiberAL-List.txt" />
+    <Text Include="Inputs\Lilith.txt" />
+    <Text Include="Inputs\My Language.txt" />
+    <Text Include="Inputs\Mzowh.txt" />
+    <Text Include="Inputs\Numbers.txt" />
+    <Text Include="Inputs\Planets.txt" />
+    <Text Include="Inputs\Shapes.txt" />
+    <Text Include="Inputs\Thelema.txt" />
+    <Text Include="Inputs\Yahweh.txt" />
+    <Text Include="Inputs\Zodiac.txt" />
     <Text Include="TODO.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -142,6 +157,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <StackReserveSize>10000000</StackReserveSize>
     </Link>
     <Manifest>
       <EnableDpiAwareness>true</EnableDpiAwareness>
@@ -162,6 +178,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <StackReserveSize>10000000</StackReserveSize>
     </Link>
     <Manifest>
       <EnableDpiAwareness>true</EnableDpiAwareness>

@@ -2,7 +2,7 @@
 #pragma once
 #include "Gematria.H++"
 #include <unordered_map>
-#include <sstream>
+#include <ostream>
 
 namespace GematriaHTML
 {
@@ -11,5 +11,10 @@ namespace GematriaHTML
 	using CSSElementStyle = std::string;
 	using GematriaCSS = std::unordered_map<CSSElementName, CSSElementStyle>;
 
-	void OutputGematriaHTML(const Gematria &gematria, const GematriaCSS &css, std::stringstream &stream);
+
+	void Begin(std::ostream &stream);
+	void Head(const GematriaCSS& css, std::ostream &stream);
+	void MultiMapBody(const GematriaMultimap &gematria, std::ostream &stream);
+	void SingularBody(const GematriaSingular &gematria, std::ostream &stream);
+	void End(std::ostream& stream);
 }

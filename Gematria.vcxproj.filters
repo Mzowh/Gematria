@@ -51,19 +51,7 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Source\Gematria.C++">
-      <Filter>Source Files\Cyphers</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Cyphers\Simple.C++">
-      <Filter>Source Files\Cyphers</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Cyphers\English.C++">
-      <Filter>Source Files\Cyphers</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Cyphers\Jewish.C++">
-      <Filter>Source Files\Cyphers</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Cyphers\Mzowh.C++">
-      <Filter>Source Files\Cyphers</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Source\GematriaHTMLBuilder.C++">
       <Filter>Source Files</Filter>
@@ -71,5 +59,60 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="TODO.txt" />
+    <Text Include="GematriaMain.txt" />
+    <Text Include="Inputs\AlchemyElements.txt">
+      <Filter>Inputs</Filter>
+    </Text>
+    <Text Include="Inputs\Continents.txt">
+      <Filter>Inputs</Filter>
+    </Text>
+    <Text Include="Inputs\Decoding USA.txt">
+      <Filter>Inputs</Filter>
+    </Text>
+    <Text Include="Inputs\GematriaMain.txt">
+      <Filter>Inputs</Filter>
+    </Text>
+    <Text Include="Inputs\HelloTestOld.txt">
+      <Filter>Inputs</Filter>
+    </Text>
+    <Text Include="Inputs\HelloTestOldOld.txt">
+      <Filter>Inputs</Filter>
+    </Text>
+    <Text Include="Inputs\Jamie.txt">
+      <Filter>Inputs</Filter>
+    </Text>
+    <Text Include="Inputs\Kabbalah.txt">
+      <Filter>Inputs</Filter>
+    </Text>
+    <Text Include="Inputs\LiberAL-List.txt">
+      <Filter>Inputs</Filter>
+    </Text>
+    <Text Include="Inputs\Lilith.txt">
+      <Filter>Inputs</Filter>
+    </Text>
+    <Text Include="Inputs\My Language.txt">
+      <Filter>Inputs</Filter>
+    </Text>
+    <Text Include="Inputs\Mzowh.txt">
+      <Filter>Inputs</Filter>
+    </Text>
+    <Text Include="Inputs\Numbers.txt">
+      <Filter>Inputs</Filter>
+    </Text>
+    <Text Include="Inputs\Planets.txt">
+      <Filter>Inputs</Filter>
+    </Text>
+    <Text Include="Inputs\Shapes.txt">
+      <Filter>Inputs</Filter>
+    </Text>
+    <Text Include="Inputs\Thelema.txt">
+      <Filter>Inputs</Filter>
+    </Text>
+    <Text Include="Inputs\Yahweh.txt">
+      <Filter>Inputs</Filter>
+    </Text>
+    <Text Include="Inputs\Zodiac.txt">
+      <Filter>Inputs</Filter>
+    </Text>
   </ItemGroup>
 </Project>

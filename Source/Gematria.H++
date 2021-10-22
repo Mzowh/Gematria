@@ -1,82 +1,96 @@
 #pragma once
-#pragma once
-#include <map>
 #include <string>
 #include <vector>
-#include <variant>
-#include <istream>
+#include <map>
+#include <set>
 
-class Gematria {
+std::string OptimizePhrase(const std::string &phrase);
+
+class Cypher {
 public:
-	using Character = char;
-	using PhraseValue = long long;
-	using CypherMap = std::map<Character, PhraseValue>;
-	using String = std::basic_string<Character>;
-	using Phrase = String;
-	using PhraseView = std::basic_string_view<Character>;
-	using CondensedStringView = std::basic_string_view<Character>;
-	using PhraseToValueMap = std::map<Phrase, PhraseValue>;
-	using UnoptimizedStringToPhraseMap = std::map<Phrase, PhraseToValueMap::iterator>;
+	using Name = std::string;
+	using Value = long long;
+	using ValueMap = std::map<char, Value>;
 
-	// Special information entered by the user for the result
-	struct Special {
-		String comment;
-	};
-
-	using UnoptimizedPhraseToSpecialMap = std::map<Phrase, Special>;
-
-	struct Result {
-		String original;
-		String optimization;
-		PhraseValue value;
-		Special special;
-	};
-
-	using Caches = std::vector<Result>;
-	using ValueToPhrasesMap = std::map<PhraseValue, Caches>;
-protected:
-	// Stores the conversion between a character and a value
-	CypherMap cypher;
-	// Stores the computed result of each phrase
-	ValueToPhrasesMap value_to_phrases;
-	PhraseToValueMap phrase_to_value;
-	UnoptimizedStringToPhraseMap unoptimized_string_map;
-	UnoptimizedPhraseToSpecialMap unoptimized_string_to_special_map;
-
-public:
-	constexpr CypherMap &GetCypher() {
-		return cypher;
+	constexpr std::string_view GetName() const {
+		return name;
 	}
-	constexpr const CypherMap &GetCypher() const {
-		return cypher;
-	}
-	constexpr const ValueToPhrasesMap &GetPhraseResultsMap() const {
-		return value_to_phrases;
-	}
-	constexpr const UnoptimizedPhraseToSpecialMap &GetSpecialsMap() const {
-		return unoptimized_string_to_special_map;
-	}
+	Value CalculatePhraseValue(const std::string_view phrase);
+	constexpr auto &Values() { return values; }
+	constexpr const auto &Values() const { return values; }
 
-	// Optimizes a string for fast querying
-	void CondenseString(String &string) const;
-	// Returns a structure containing the original phrase, its optimization, and its gematria value.
-	// Normally used in conjunction with fn EnterResult
-	Result ComputePhraseResult(const PhraseView phrase) const;
-	// Enters a phrase into the result map
-	void EnterPhrase(const PhraseView phrase);
-	// Enter a phrase into the result map with a special value included
-	void EnterPhrase(const PhraseView phrase, const Special &special);
-	// Enters a result into the result map (Does not validate)
-	void EnterResult(const Result &result);
-	// Validates a result, for error checking
-	bool IsResultValid(const Result &result) const;
-	// Computes the gematria value of a standalone phrase
-	PhraseValue ComputePhraseGematriaValue(const PhraseView phrase) const;
+	explicit Cypher(const Name &name = "Unnamed Cypher", const std::map<char, Value> &values = {});
+
+private:
+	Name name;
+	std::map<char, Value> values;
+	std::map<std::string, Value> optimized_string_to_value;
 };
 
-// Insert phrases from a stream, line by line
-void GematriaInsertPhrasesStream(Gematria &gematria, std::istream &stream, const Gematria::Character delimiter = '\n');
-void CombineCyphers(Gematria::CypherMap &left, const Gematria::CypherMap &right);
-void CombineCyphersAdd(Gematria::CypherMap& left, const Gematria::CypherMap& right);
-void CombineCyphersSubtract(Gematria::CypherMap& left, const Gematria::CypherMap& right);
-void CombineCyphersMultiply(Gematria::CypherMap& left, const Gematria::CypherMap& right);
+struct GematriaResult {
+	std::string phrase;
+	Cypher::Value value_singular;
+	std::map<Cypher::Name, Cypher::Value> values_all;
+	std::vector<std::string> comments;
+};
+
+class GematriaSingular {
+public:
+	void EnterPhrase(const std::string &phrase);
+
+	constexpr const auto &GetPhraseToValue() const {
+		return phrase_to_value;
+	}
+
+	constexpr const auto &GetValueToPhrases() const {
+		return value_to_phrases;
+	}
+
+	constexpr const auto &GetCypher() const {
+		return cypher;
+	}
+
+	constexpr auto &GetCypher() {
+		return cypher;
+	}
+
+private:
+	Cypher *cypher = nullptr;
+	std::map<Cypher::Value, std::vector<GematriaResult>> value_to_phrases;
+	std::map<std::string, Cypher::Value> phrase_to_value;
+	std::set<std::string> entered_phrases;
+};
+
+
+class GematriaMultimap {
+public:
+	void EnterPhrase(const std::string &phrase, Cypher &cypher);
+
+	template<typename ...Cyphers>
+	void EnterPhrase(const std::string &phrase, Cyphers &...cypher) {
+		(EnterPhrase(phrase, cypher), ...);
+	}
+
+	constexpr const auto &GetResults() const {
+		return results;
+	}
+
+	constexpr const auto &GetUsedCyphers() const {
+		return used_cyphers;
+	}
+
+	constexpr const auto &GetEnteredPhrases() const {
+		return entered_phrases;
+	}
+
+	const std::string &GetOptimizedPhrase(const std::string &phrase) const;
+
+private:
+	std::map<std::string, GematriaResult> results;
+	std::map<std::string, std::string> phrase_to_optimized;
+	std::set<std::string> used_cyphers;
+	std::set<std::string> entered_phrases;
+};
+
+// Map of Cypher Names to Cyphers
+using CypherMap = std::map<std::string, Cypher>;
