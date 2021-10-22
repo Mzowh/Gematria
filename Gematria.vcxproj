@@ -19,11 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Source\Cyphers\All.H++" />
-    <ClInclude Include="Source\Cyphers\English.H++" />
-    <ClInclude Include="Source\Cyphers\Jewish.H++" />
-    <ClInclude Include="Source\Cyphers\Mzowh.H++" />
-    <ClInclude Include="Source\Cyphers\Simple.H++" />
     <ClInclude Include="Source\Gematria.H++" />
     <ClInclude Include="Source\GematriaHTMLBuilder.H++" />
   </ItemGroup>

@@ -13,9 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\Cyphers">
-      <UniqueIdentifier>{2b21a40d-8e98-4391-972a-fe34f77e7cd7}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Cyphers">
       <UniqueIdentifier>{1b01b0b4-79eb-422d-bf53-c0714848e81a}</UniqueIdentifier>
     </Filter>
@@ -29,21 +26,6 @@
     </ClInclude>
     <ClInclude Include="Source\Gematria.H++">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Cyphers\Mzowh.H++">
-      <Filter>Header Files\Cyphers</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Cyphers\Simple.H++">
-      <Filter>Header Files\Cyphers</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Cyphers\English.H++">
-      <Filter>Header Files\Cyphers</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Cyphers\Jewish.H++">
-      <Filter>Header Files\Cyphers</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Cyphers\All.H++">
-      <Filter>Header Files\Cyphers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
